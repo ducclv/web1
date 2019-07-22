@@ -77,9 +77,22 @@ html, body {
     margin-right: 2%;
     margin-top: -60px;
     /* background-image: url(../images/bg-widget.png); */
-    height: 300px;
+    height: auto;
     color: blue;
 }
+
+.fourth{
+   
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    background-color: white !important;
+    /* background-image: url(../images/bg-widget.png); */
+    height: 500px;
+    color: blue;
+
+}
+
 .card{
     background-image: url(../images/bg-widget.png);
     background-position: center;
