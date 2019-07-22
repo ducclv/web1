@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+    color: white;
+}
+.banner {
+    /* background-size: auto; */
+    /* width: 1250px; */
+    width: auto;
+    background-color: rgba(36, 28, 146, 0.8) !important; 
+    background-image: url(../images/bg-widget.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.banner a:hover{
+    color: chartreuse !important;
+}
+
+.second{
+    
+    border-bottom: 1px solid blue;
+    width: auto;
+    height: 340px;
+    background-image: url(../images/banner.jpg);
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    
+}
+.second a{
+    color: #f5f5f5;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 10px
+}
+.second a:hover{
+    color: gold;
+}
+
+.topnav {
+    /* overflow: hidden; */
+    margin-left: 10%;
+    margin-top: 5%;
+    color: rgb(66, 5, 122);
+   
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button{
+    color: black;
+    background-color: white;
+    border: none;
+}
+
+.dropdown button:hover{
+    color: white;
+}
+.dropdown-menu a{
+    color: black;
+}
+
+.third{
+    background-color: white !important;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: -60px;
+    /* background-image: url(../images/bg-widget.png); */
+    height: 300px;
+    color: blue;
+}
+.card{
+    background-image: url(../images/bg-widget.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
