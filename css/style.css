@@ -86,9 +86,8 @@ html, body {
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 5%;
+    height: auto;
     background-color: white !important;
-    /* background-image: url(../images/bg-widget.png); */
-    height: 500px;
     color: blue;
 
 }
@@ -97,4 +96,14 @@ html, body {
     background-image: url(../images/bg-widget.png);
     background-position: center;
     background-repeat: no-repeat;
+}
+	
+.rounded-corners{
+    width: 20px;
+    height: 20px;
+    background:rgba(52, 187, 12, 0.8);
+    color: #f5f5f5;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }
