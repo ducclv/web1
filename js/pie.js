@@ -1,5 +1,5 @@
 // Build the chart
-Highcharts.chart('pie', {
+Highcharts.chart('container', {
     chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
