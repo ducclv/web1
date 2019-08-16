@@ -63,31 +63,20 @@
           <a href="#">DVC MỨC ĐỘ 1-2</a>
           <a href="#">TRA CỨU HỒ SƠ</a>
           <a href="#">THỐNG KÊ XỬ LÝ</a>
-         </div>
+    </div>
            
          <div class="topnav">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4">
-                            <h5>
+                                <h5>
                                     <b>TRA CỨU HỒ SƠ QUA WEBSITE</b>
-                               </h5>
+                                </h5>
                                    
-                               <div class="dropdown">
-                                       <button type="button" 
-                                       class="btn btn-primary dropdown-toggle" 
-                                       data-toggle="dropdown"
-                                       >
-                                         Đơn vị 
-                                       </button>
-           
-                                       <div class="dropdown-menu">
-                                         <a class="dropdown-item" href="#">Đơn vị 1</a>
-                                         <a class="dropdown-item" href="#">Đơn vị 2</a>
-                                         <a class="dropdown-item" href="#">Đơn vị 3</a>
-                                       </div>
-                                    
-                                   <input style="height: 37px", type="text" placeholder="  Mã hồ sơ">
-                               </div>
+                               <select style="height: 37px">
+                                   <option value="0" selected>Đơn vị</option>
+                                   <option value="1">Đơn vị 1</option>
+                               </select>
+                               <input style="height: 37px", type="text" placeholder="  Mã hồ sơ">
                                    <button >
                                        <img width = "50px" height="38px"   
                                        src="./images/search.png">
@@ -99,7 +88,8 @@
                                </p>
                     </div>    
                     <div class="col-xs-12 col-sm-6 col-md-4">
-                        Biểu đồ
+                        <center><div id="chart-hs-1" style="width: 180px; height: 230px"></div></center>
+                        
                     </div>
                     <div>
                         THỐNG KÊ DỊCH VỤ CÔNG THEO LĨNH VỰC
@@ -134,7 +124,7 @@
             width: 350px; 
             color: white;
             padding-top:10px;
-            padding-left: 10px;
+            padding-left:px;
             padding-bottom: 10px;
             ">
                     DỊCH VỤ CÔNG TRỰC TUYẾN MỨC ĐỘ 3 VÀ 4
@@ -306,7 +296,6 @@
 
     <div class="fourth" >
         <div class="card">
-            <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-8" >
 
@@ -316,7 +305,7 @@
                         width: 350px; 
                         color: white;
                         padding-top:10px;
-                        padding-left: 10px;
+                        padding-left:px;
                         padding-bottom: 10px;
                         ">
                                 DỊCH VỤ CÔNG TRỰC TUYẾN MỨC ĐỘ 1 VÀ 2
@@ -326,37 +315,13 @@
                                     margin-left:20%;
                                     margin-top:30px;
                                     ">
-
-                                <div class="dropdown">
-                                        <button type="button" 
-                                        class="btn btn-primary dropdown-toggle" 
-                                        data-toggle="dropdown"
-                                        >
-                                          Chọn đơn vị 
-                                        </button>
-            
-                                        <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#">Đơn vị 1</a>
-                                          <a class="dropdown-item" href="#">Đơn vị 2</a>
-                                          <a class="dropdown-item" href="#">Đơn vị 3</a>
-                                        </div>
-
-                                        <button type="button" 
-                                        class="btn btn-primary dropdown-toggle" 
-                                        data-toggle="dropdown"
-                                        >
-                                          Chọn lĩnh vực 
-                                        </button>
-            
-                                        <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="#">Đơn vị 1</a>
-                                          <a class="dropdown-item" href="#">Đơn vị 2</a>
-                                          <a class="dropdown-item" href="#">Đơn vị 3</a>
-                                        </div>
-
-                                     
-                                    <input style="height: 37px", type="text" placeholder="  Mã hồ sơ">
-                                </div>
+                                <select>
+                                    <option value="0" selected>Chọn đơn vị</option>
+                                </select>
+                                <select>
+                                    <option value="0" selected>Chọn lĩnh vực</option>
+                                </select>
+                                <input style="height: 37px", type="text" placeholder="  Mã hồ sơ">
                                     <button >
                                         <img width = "50px" height="38px"   
                                         src="./images/search.png">
@@ -576,7 +541,6 @@
         </div>
         <div>
          
-        </div>
     </div>
 
     <div style="background-color: rgba(36, 28, 146, 0.8);padding:2% ">
@@ -591,5 +555,33 @@
                 Ghi rõ nguồn "dvc.mard.gov.vn" khi bạn sử dụng lại thông tin của website này.
             </p>
         </center>
+
+
+
+
+        <script type="text/javascript" src="js/highchart.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script>
+            $(document).ready(function(){
+                chartTotal(465);
+                chartTotalYear(97);
+     
+                function ticker() {
+                    $('#list-marque li:first-child').slideUp(function() {
+                        $(this).appendTo($('#list-marque')).fadeIn();
+                    });
+                }
+                var timer = setInterval(ticker, 3000);
+                $('#list-marque').on({
+                    mouseenter: function(){
+                        clearInterval(timer);
+                    },
+                    mouseleave: function(){
+                        timer = setInterval(ticker, 3000);
+                    }
+                });        
+            })
+        </script>
+    
 </body>
 </html>     
